@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- <h1 class="Summariser">
+  Summariser {{ summary }}!
+</h1> -->
+<h3 class="title is-3">Text Summariser</h3>
+        <form method="POST" action="/summarise">
+        	<div class="columns">
+	        	<div class="column">
+	<!--             <div class="field"> -->
+	<!--                 <div class="control"> -->
+	                    <textarea class="textarea is-normal" type="text" name="text" placeholder="Text" rows="15" autofocus="" autocomplete="off">{{ text }}</textarea>
+	<!--                 </div> -->
+	<!--             </div> -->
+	            </div>
+
+	            <div class="column">
+	<!--                 <div class="control"> -->
+	                    <textarea class="textarea is-normal" type="text" name="summary" placeholder="Summary" rows="15" autofocus="" autocomplete="off"> {{ summary }} </textarea>
+	<!--                 </div> -->
+	            </div>
+            
+            </div>
+            <button class="button is-danger is-normal">Submit</button>
+        </form>
+{% endblock %}
